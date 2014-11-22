@@ -1,1 +1,69 @@
-@CHARSET "UTF-8";
+/* IntuitHack CSS
+ * 
+ * File: style.css
+ * Contents: All CSS, media queries, @imports for fonts
+ */
+
+/*
+ * Crete Round
+ */
+@import url(http://fonts.googleapis.com/css?family=Crete+Round);
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background:#f7f7f7;
+}
+
+section#login {
+  position: absolute;
+  width: 500px;
+  height: 370px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0 0 -250px;
+}
+
+.logo img {
+  display: inline-block;
+  border-radius: 75px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+  border:3px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo header {
+  font-size: 2.5em;
+  font-family: 'Crete Round', sans-serif;
+}
+
+#login input {
+  display: block;
+  width: 250px;
+  margin: 10px auto;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  padding: 15px;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+#login input:hover, #login input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+}
+
+#login input[type=submit] {
+  width: 100px;
+  padding: 10px;
+  background: -webkit-linear-gradient( #227EE0, #0060BB );
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Crete Round', sans-serif;
+  font-size: 1em;
+}
+
+#login input[type=submit]:hover, #login input[type=submit]:focus {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.4);
+}

@@ -17,6 +17,6 @@
   
   // new user object
   $user = new user();
-  $session;
+  $session = new session();
    
 ?>

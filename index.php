@@ -3,10 +3,8 @@
 
   $page = isset($_GET["page"]) ? $_GET["page"] : null;
   
-  
-  
   $page = ucfirst( $page );
-  
+
 ?>
 <!doctype html>
 <html>
@@ -18,24 +16,33 @@
     ?>
     Intuit Hackathon
   </title>
+  
+  <link href="fonts/creteround.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  
+  <script src="login.js"></script>
+  
 </head>
 <body>
   
   <?php
   
-    if( $session ){
+    if( $session->isActive(true) ){
       
       include_once "templates/sidebar.php";
       
       if ($page == 'Home') {
-      	include('Templates/home.php');
+      	include('templates/home.php');
+        
       } elseif ($page == 'Game') {
-      	include('Templates/game.php');
+      	include('templates/game.php');
+        
       } elseif ($page == 'Profile') {
-      	include('Templates/profile.php');
+      	include('templates/profile.php');
+        
       } elseif ($page == 'Report') {
-      	include('Templates/reports.php');
+      	include('templates/report.php');
+        
       }
       
       

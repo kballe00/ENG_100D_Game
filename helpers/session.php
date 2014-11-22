@@ -9,7 +9,11 @@
   global $session;
 
   class session {
-  
+    
+    public function isActive( $x ) {
+      return $x;
+    }
+    
   }
   
 ?>
