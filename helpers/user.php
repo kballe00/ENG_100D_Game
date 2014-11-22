@@ -9,21 +9,51 @@
   global $user;
   
   class user {
-    private $name,
-            $age,
-            $sex,
-    		$has_job,
-    		$job_title,
-    		$is_student,
-    		$school_name,
-    		$has_bank_account,
-    		$account_balance,
-    		$round;
-    		
+    public $name,
+           $school,
+           $salary,
+           $carPayment,
+           $bank,
+           $credit;
+    
+    
     
     public function hasJob(){
-      return $has_job;
+      return ($wage > 0) ? true : false;
     }
+    
+    
+    
+    public function hasCar(){
+      return ($carPayment > 0) ? true : false;
+    }
+    
+    
+    
+    public function pull( $user, $key ){
+      global $dbh;
+    
+      $sth = $dbh->prepare("SELECT $key FROM users WHERE username='$user'");
+      $sth->execute();
+      
+      $fetch = $sth->fetch(PDO::MYSQL_FETCH_ASSOC);
+      return $fetch[ $key ];
+    }
+    
+    
+    
+    public function put( $user, $key, $val ){
+      global $dbh;
+    
+      $old = $this->pull( $user, $key );
+      $new = $old + $val;
+      
+      $sth = $dbh->prepare("UPDATE users SET $key = '$new' WHERE username = '$user'");
+      
+      $sth->execute();
+    }
+    
+    
     
     public function validate( $u, $p ){
       global $dbh;
