@@ -24,7 +24,7 @@
     
       $p = md5( $p );
       
-      $sth = $dbh->prepare("SELECT * FROM users WHERE name=$u AND password=$p");
+      $sth = $dbh->prepare("SELECT * FROM users WHERE name='$u' AND password='$p'");
       $sth->execute();
       
       return $sth->rowCount();

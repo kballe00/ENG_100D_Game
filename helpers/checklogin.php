@@ -1,13 +1,19 @@
 <?php
+  header('Content-type: application.json');
 
-$username = $_POST ["username"];
-$password = $_POST ["password"];
+  require_once("/../engine/global.php");
 
-if($user->validate($username, $password)) {
+  $username = $_POST["username"];
+  $password = $_POST["password"];
+  
+  if( $user->validate($username, $password) ) {
     $session->register($username, $password);
-    echo "success";
-} else {
-    echo "failure";
-}
+    $r['response'] = "success";
+  } else {
+    $r['response'] = "failure";
+    //http_response_code(404);
+  }
 
+  echo json_encode( $r );
+  
 ?>
