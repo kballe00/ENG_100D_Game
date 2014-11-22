@@ -9,7 +9,7 @@
   session_start();
   
   // database info
-  require_once("db.php");
+  require("db.php");
    
   // user class
   require_once(dirname(__FILE__)."/../helpers/user.php");
