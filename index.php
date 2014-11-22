@@ -28,7 +28,11 @@
 <body>
   <nav id="primary">
     <a href="about">ABOUT</a>
-    <a href="logout">LOGOUT</a>
+    <?php
+      if( $session->isActive() ){
+        echo '<a href="logout">LOGOUT</a>';
+      }
+    ?>
   </nav>
   <?php
     if( $session->isActive() ){

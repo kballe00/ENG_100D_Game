@@ -1,13 +1,8 @@
-<?php
-
-  
-
-?>
 <section id="login">
   <div class="logo">
     <img src="intuit.jpg" alt>
     <header>
-      INTUIT HACKATHON
+      WELCOME <span>to</span> WISELY
     </header>
   </div>
   <div class="login">
