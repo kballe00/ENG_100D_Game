@@ -10,10 +10,10 @@
   require_once("db.php");
    
   // user class
-  require_once("/../helpers/user.php");
+  require_once(dirname(__FILE__)."/../helpers/user.php");
   
   // session class
-  require_once("/../helpers/session.php");
+  require_once(dirname(__FILE__)."/../helpers/session.php");
   
   // new user object
   $user = new user();
