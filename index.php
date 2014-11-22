@@ -17,17 +17,17 @@
     Intuit Hackathon
   </title>
   
-  <link href="fonts/creteround.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   
-  <script src="login.js"></script>
+  <script src="//code.jquery.com/jquery-latest.min.js"></script>
+  <script src="js/login.js"></script>
   
 </head>
 <body>
   
   <?php
   
-    if( $session->isActive(true) ){
+    if( $session->isActive(false) ){
       
       include_once "templates/sidebar.php";
       
@@ -53,16 +53,5 @@
     }
   
   ?>
-  
-  <script>
-    (function( d ){
-      var jQ = d.createElement("script"),
-          l  = d.head.getElementsByTagName("link")[0];
-      
-      jQ.src = "http://code.jquery.com/jquery-latest.min.js";
-      
-      d.head.appendChild( jQ, l );
-    })( document );
-  </script>
 </body>
 </html>
