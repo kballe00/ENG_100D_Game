@@ -6,6 +6,8 @@
    * Contents: 
    */
   
+  require_once("/../engine/db.php");
+  
   global $user;
   
   class user {
@@ -17,9 +19,17 @@
       
     }
     
+    public function validate( $u, $p ){
+      global $dbh;
+    
+      $p = md5( $p );
+      
+      $sth = $dbh->prepare("SELECT * FROM users WHERE name=$u AND password=$p");
+      $sth->execute();
+      
+      return $sth->rowCount();
+    }
+    
   }
-  
-  // from engine/global.php
-  $user = new user();
   
 ?>
