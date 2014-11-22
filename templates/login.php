@@ -11,7 +11,7 @@
     </header>
   </div>
   <div class="login">
-    <form action="checklogin.php">
+    <form>
       <input name="username" placeholder="username">
       <input name="password" type="password" placeholder="password">
       
