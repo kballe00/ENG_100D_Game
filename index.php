@@ -3,6 +3,8 @@
   
   $page = isset($_GET["page"]) ? $_GET["page"] : null;
   
+  
+  
   $page = ucfirst( $page );
   
 ?>
@@ -19,6 +21,20 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
+  
+  <?php
+  
+    if( $session ){
+      
+      include_once "templates/sidebar.php";
+      
+    } else {
+      
+      include_once "templates/login.php";
+      
+    }
+  
+  ?>
   
   <script>
     (function( d ){

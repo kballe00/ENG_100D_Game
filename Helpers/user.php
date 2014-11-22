@@ -1,15 +1,25 @@
 <?php
-  
-  require_once("../engine/global.php");
+
+  /* User class
+   *
+   * File: user.php
+   * Contents: 
+   */
   
   global $user;
   
   class user {
-    $name;
-    $age;
-    $sex;
+    private $name,
+            $age,
+            $sex;
+    
+    public function hasJob(){
+      
+    }
+    
   }
   
+  // from engine/global.php
   $user = new user();
   
 ?>
