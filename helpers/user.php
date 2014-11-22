@@ -24,7 +24,7 @@
     		
     
     public function hasJob(){
-      return has_job;
+      return $has_job;
     }
     
     public function validate( $u, $p ){
@@ -32,7 +32,7 @@
     
       $p = md5( $p );
       
-      $sth = $dbh->prepare("SELECT * FROM users WHERE name='$u' AND password='$p'");
+      $sth = $dbh->prepare("SELECT * FROM users WHERE username='$u' AND password='$p'");
       $sth->execute();
       
       return $sth->rowCount();

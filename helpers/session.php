@@ -10,13 +10,19 @@
 
   class session {
     
+    private $active;
+    
   	public function register($username) {
-  		session_start();
-  		$_SESSION['username'] = $username;
+  		if( session_status() !== PHP_SESSION_ACTIVE ){
+        session_start();
+        $this->active = true;
+        $_SESSION['username'] = $username;
+      }
   	}
   	
   	public function terminate() {
   		session_destroy();
+      $this->active = false;
   	}
   	
   	public function get($var) {
@@ -24,7 +30,7 @@
   	}
   	
   	public function isActive() {
-  		return session_status() == PHP_SESSION_ACTIVE;
+  		return $this->active;
   	}
     
   }

@@ -26,8 +26,7 @@
 <body>
   
   <?php
-  
-    if( $session->isActive(false) ){
+    if( $session->isActive() ){
       
       include_once "templates/sidebar.php";
       
@@ -47,7 +46,7 @@
       
       
     } else {
-      
+      echo $session->isActive();
       include_once "templates/login.php";
       
     }
