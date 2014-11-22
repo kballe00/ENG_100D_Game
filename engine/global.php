@@ -17,8 +17,11 @@
   // session class
   require_once(dirname(__FILE__)."/../helpers/session.php");
   
+  // game class
+  require_once(dirname(__FILE__)."/../helpers/game.php");
+  
   // new user object
   $user = new user();
   $session = new session();
-   
+  $game = new game();
 ?>

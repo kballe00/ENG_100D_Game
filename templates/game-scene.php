@@ -1,5 +1,9 @@
-<?php
-while (true) {
-	$stmt = $dbh->query('SELECT turn FROM users WHERE id=');
-}
-?>
+<!DOCTYPE html>
+<head></head>
+<body>
+	<p>
+	<?php
+		global $game;
+		echo $game->get_question();	
+	?>
+</body>
