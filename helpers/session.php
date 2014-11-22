@@ -23,13 +23,9 @@
   		return $_SESSION[$var];
   	}
   	
-//   	public function isActive() {
-//   		return session_status() == PHP_SESSION_ACTIVE;
-//   	}
-  	
-    public function isActive( $x ) {
-      return $x;
-    }
+  	public function isActive() {
+  		return session_status() == PHP_SESSION_ACTIVE;
+  	}
     
   }
   
