@@ -1,7 +1,7 @@
 /* IntuitHack CSS
  * 
  * File: style.css
- * Contents: All CSS, media queries, @imports for fonts
+ * Contents: All CSS, media queries
  */
 
 html, body {
@@ -42,7 +42,7 @@ nav#primary a:hover {
  * MAIN CONTENT
  */
 main {
-  width: 75%;
+  width: 70%;
   height: 100%;
   float: right;
   box-sizing: border-box;
@@ -54,7 +54,7 @@ main {
  * SIDEBAR
  */
 section#sidebar {
-  width: 25%;
+  width: 30%;
   height: 100%;
   padding: 15px;
   position: fixed;
@@ -153,6 +153,7 @@ section#sidebar {
     line-height: 20px;
     padding: 10px;
     text-align: center;
+    min-width: 130px;
   }
 
 
@@ -181,6 +182,13 @@ section#login {
   .logo header {
     font-size: 2.5em;
     font-family: 'Crete Round', sans-serif;
+  }
+  
+  .logo header span {
+    font-size: 0.5em;
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    vertical-align: 7px;
   }
 
   #login input {
@@ -213,3 +221,55 @@ section#login {
       border: 1px solid rgba(0, 0, 0, 0.8);
       box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.4);
     }
+    
+@media (min-device-width: 0px) and (max-device-width: 640px), screen and (max-width: 640px) {
+
+  html, body {
+    overflow: auto;
+  }
+
+  nav#primary {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 90px;
+  }
+  
+  nav#primary a {
+    color: #fff;
+    display: block;
+    float: none;
+    background: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  nav#primary a:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  section#sidebar {
+    width: 100%;
+    display: block;
+    position: relative;
+    height: auto;
+  }
+  
+  section#sidebar aside {
+    height: 150px;
+  }
+  
+  section#sidebar nav a {
+    width: 50%;
+    display: block;
+    margin: 4px auto;
+    padding: 6px;
+  }
+  
+  main {
+    float: none;
+    display: block;
+    
+  }
+
+}
