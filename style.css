@@ -4,11 +4,6 @@
  * Contents: All CSS, media queries, @imports for fonts
  */
 
-/*
- * Crete Round
- */
-@import url(http://fonts.googleapis.com/css?family=Crete+Round);
-
 html, body {
   margin: 0;
   padding: 0;

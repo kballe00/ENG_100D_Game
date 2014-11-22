@@ -9,6 +9,7 @@
 <!doctype html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>
     <?php
       if( $page != null)
@@ -17,6 +18,7 @@
     Intuit Hackathon
   </title>
   
+  <link href="http://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   
   <script src="//code.jquery.com/jquery-latest.min.js"></script>
