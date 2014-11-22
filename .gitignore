@@ -1,4 +1,5 @@
 .settings
 .buildpath
 .project
+/nbproject/private/
 /engine/db.php

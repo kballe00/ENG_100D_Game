@@ -15,6 +15,117 @@ html, body {
   background:#f7f7f7;
 }
 
+
+/*
+ * SIDEBAR
+ */
+section#sidebar {
+  width: 25%;
+  height: 100%;
+  padding: 15px;
+  position: fixed;
+  left: 0;
+  box-sizing: border-box;
+  background: linear-gradient( #757575, #111 );
+  box-shadow: inset -3px 0px 3px rgba(0,0,0,0.3);
+}
+
+  section#sidebar header {
+    text-align: center;
+  }
+
+    section#sidebar header img {
+      width: 100px;
+      height: 100px;
+    }
+    
+    section#sidebar header h1 {
+      margin: 0;
+      padding: 0;
+      font-family: 'Crete Round', sans-serif;
+      color: #fff;
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+      font-weight: 400;
+      font-size: 1.85em;
+    }
+  
+  section#sidebar aside {
+    width: 100%;
+    margin-top: 20px;
+    color: #ccc;
+    font-size: 0.9em;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  }
+  
+    section#sidebar aside header {
+      width: 100%;
+      line-height: 30px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      text-align: left;
+      font-family: Arial, sans-serif;
+    }
+    
+      section#sidebar aside header a, section#sidebar nav a {
+        display: inline-block;
+        float: right;
+        padding: 7px;
+        line-height:15px;
+        background: linear-gradient( #227EE0, #0060BB );
+        color: #fff;
+        font-family: 'Crete Round', sans-serif;
+        text-decoration: none;
+        border-radius: 3px;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        text-shadow: none;
+      }
+    
+        section#sidebar aside header a:hover, section#sidebar nav a:hover {
+          box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.4);
+        }
+    
+  section#sidebar aside span {
+    display: inline-block;
+    line-height: 30px;
+    width: 50%;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+    
+  section#sidebar aside .stat {
+    padding:0 5px 0 10px;
+    text-align: right;
+    clear: both;
+    float: left;
+  }
+  
+  section#sidebar aside .val {
+    padding:0 10px 0 5px;
+    text-align: left;
+    float: right;
+    color: #fff;
+  }
+  
+  section#sidebar nav {
+    clear: both;
+    margin-top: 20px;
+  }
+  
+  section#sidebar nav a {
+    display: inline-block;
+    float: none;
+    width: 42%;
+    margin: 5px 4%;
+    box-sizing: border-box;
+    line-height: 20px;
+    padding: 10px;
+    text-align: center;
+  }
+
+
+
+/*
+ * LOGIN PAGE
+ */
 section#login {
   position: absolute;
   width: 500px;
@@ -25,45 +136,46 @@ section#login {
   margin: -250px 0 0 -250px;
 }
 
-.logo img {
-  display: inline-block;
-  border-radius: 75px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
-  border:3px solid rgba(255, 255, 255, 0.3);
-}
+  .logo img, #sidebar header img {
+    background: #fff;
+    display: inline-block;
+    border-radius: 80px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+    border:3px solid rgba(255, 255, 255, 0.3);
+  }
 
-.logo header {
-  font-size: 2.5em;
-  font-family: 'Crete Round', sans-serif;
-}
+  .logo header {
+    font-size: 2.5em;
+    font-family: 'Crete Round', sans-serif;
+  }
 
-#login input {
-  display: block;
-  width: 250px;
-  margin: 10px auto;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  border-radius: 3px;
-  padding: 15px;
-  transition: all 0.2s ease-in-out;
-  outline: none;
-}
+  #login input {
+    display: block;
+    width: 250px;
+    margin: 10px auto;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    padding: 15px;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+  }
 
-#login input:hover, #login input:focus {
-  border: 1px solid rgba(0, 0, 0, 0.6);
-  box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-}
+    #login input:hover, #login input:focus {
+      border: 1px solid rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    }
 
-#login input[type=submit] {
-  width: 100px;
-  padding: 10px;
-  background: -webkit-linear-gradient( #227EE0, #0060BB );
-  cursor: pointer;
-  color: #fff;
-  font-family: 'Crete Round', sans-serif;
-  font-size: 1em;
-}
+  #login input[type=submit] {
+    width: 100px;
+    padding: 10px;
+    background: linear-gradient( #227EE0, #0060BB );
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Crete Round', sans-serif;
+    font-size: 1em;
+  }
 
-#login input[type=submit]:hover, #login input[type=submit]:focus {
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.4);
-}
+    #login input[type=submit]:hover, #login input[type=submit]:focus {
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.4);
+    }
