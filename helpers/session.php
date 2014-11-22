@@ -5,7 +5,7 @@
    * File: session.php
    * Contents: 
    */
-
+   
   global $session;
 
   class session {
@@ -13,16 +13,14 @@
     private $active;
     
   	public function register($username) {
-  		if( session_status() !== PHP_SESSION_ACTIVE ){
-        session_start();
-        $this->active = true;
+  		if( !isset($_SESSION['username']) ){
         $_SESSION['username'] = $username;
       }
   	}
   	
   	public function terminate() {
+      session_unset();
   		session_destroy();
-      $this->active = false;
   	}
   	
   	public function get($var) {
@@ -30,7 +28,7 @@
   	}
   	
   	public function isActive() {
-  		return $this->active;
+  		return isset($_SESSION['username']);
   	}
     
   }

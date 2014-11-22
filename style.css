@@ -13,6 +13,45 @@ html, body {
   margin: 0;
   padding: 0;
   background:#f7f7f7;
+  overflow:hidden;
+}
+
+/*
+ * GLOBAL NAV
+ */
+nav#primary {
+  position: absolute;
+  width: 180px;
+  top: 0;
+  right: 10px;
+}
+
+nav#primary a {
+  display: inline-block;
+  float: left;
+  text-decoration: none;
+  color: #000;
+  font-family: 'Crete Round', sans-serif;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  width: 90px;
+}
+
+nav#primary a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+
+/*
+ * MAIN CONTENT
+ */
+main {
+  width: 75%;
+  height: 100%;
+  float: right;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 

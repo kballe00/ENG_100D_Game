@@ -6,6 +6,8 @@
    * Contents: 
    */
   
+  session_start();
+  
   // database info
   require_once("db.php");
    

@@ -24,7 +24,10 @@
   
 </head>
 <body>
-  
+  <nav id="primary">
+    <a href="about">ABOUT</a>
+    <a href="logout">LOGOUT</a>
+  </nav>
   <?php
     if( $session->isActive() ){
       
@@ -42,11 +45,15 @@
       } elseif ($page == 'Report') {
       	include('templates/report.php');
         
+      } elseif ($page == 'Logout') {
+        $session->terminate();
+        header("Location: login");
+      
       }
       
       
     } else {
-      echo $session->isActive();
+    
       include_once "templates/login.php";
       
     }
