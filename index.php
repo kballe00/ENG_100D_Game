@@ -1,10 +1,21 @@
+<?php
+  
+  $page = isset($_GET["page"]) ? $_GET["page"] : null;
+  
+  $page = ucfirst( $page );
+  
+?>
 <!doctype html>
 <html>
 <head>
-  <title></title>
-  
+  <title>
+    <?php
+      if( $page != null)
+        echo $page . " - ";
+    ?>
+    Intuit Hackathon
+  </title>
   <link href="style.css" rel="stylesheet">
-  
 </head>
 <body>
 
