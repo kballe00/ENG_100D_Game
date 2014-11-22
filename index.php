@@ -1,6 +1,6 @@
 <?php
   require_once("engine/global.php");
-  
+
   $page = isset($_GET["page"]) ? $_GET["page"] : null;
   
   
@@ -27,6 +27,17 @@
     if( $session ){
       
       include_once "templates/sidebar.php";
+      
+      if ($page == 'Home') {
+      	include('Templates/home.php');
+      } elseif ($page == 'Game') {
+      	include('Templates/game.php');
+      } elseif ($page == 'Profile') {
+      	include('Templates/profile.php');
+      } elseif ($page == 'Report') {
+      	include('Templates/reports.php');
+      }
+      
       
     } else {
       
