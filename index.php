@@ -13,7 +13,7 @@
       var jQ = d.createElement("script"),
           l  = d.head.getElementsByTagName("link")[0];
       
-      jQ.src = "//code.jquery.com/jquery-latest.min.js";
+      jQ.src = "http://code.jquery.com/jquery-latest.min.js";
       
       d.head.appendChild( jQ, l );
     })( document );
