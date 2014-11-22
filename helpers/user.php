@@ -6,22 +6,15 @@
    * Contents: 
    */
   
+  require_once(dirname(__FILE__)."/../engine/db.php");
+  
   global $user;
   
   class user {
-    public $name,
-           $school,
-           $salary,
-           $carPayment,
-           $bank,
-           $credit;
-    
-    
     
     public function hasJob(){
       return ($wage > 0) ? true : false;
     }
-    
     
     
     public function hasCar(){
@@ -29,8 +22,7 @@
     }
     
     
-    
-    public function pull( $user, $key ){
+    public function pull( $username, $key ){
       global $dbh;
     
       $sth = $dbh->prepare("SELECT $key FROM users WHERE username='$user'");
@@ -41,8 +33,7 @@
     }
     
     
-    
-    public function put( $user, $key, $val ){
+    public function put( $username, $key, $val ){
       global $dbh;
     
       $old = $this->pull( $user, $key );
