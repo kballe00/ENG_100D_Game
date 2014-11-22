@@ -268,8 +268,31 @@ section#login {
   
   main {
     float: none;
+    display: block; 
+  }
+  
+  section#login {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 15px 0;
+    left: 0;
+    top: 0;
+  }
+  
+  section#login header span {
     display: block;
-    
+  }
+  
+  section#login .login {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+  
+  section#login .login input {
+    width: 100%;
+    box-sizing: border-box;
   }
 
 }
