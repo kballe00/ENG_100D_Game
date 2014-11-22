@@ -13,10 +13,18 @@
   class user {
     private $name,
             $age,
-            $sex;
+            $sex,
+    		$has_job,
+    		$job_title,
+    		$is_student,
+    		$school_name,
+    		$has_bank_account,
+    		$account_balance,
+    		$round;
+    		
     
     public function hasJob(){
-      
+      return has_job;
     }
     
     public function validate( $u, $p ){
