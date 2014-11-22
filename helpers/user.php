@@ -6,8 +6,6 @@
    * Contents: 
    */
   
-  require_once("/../engine/db.php");
-  
   global $user;
   
   class user {
