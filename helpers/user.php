@@ -11,7 +11,7 @@
   global $user;
   
   class user {
-    private $name,
+    public $name,
             $age,
             $sex,
     		$has_job,
