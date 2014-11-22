@@ -1,4 +1,5 @@
 <?php
+  require_once("engine/global.php");
   
   $page = isset($_GET["page"]) ? $_GET["page"] : null;
   
@@ -18,7 +19,7 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
-
+  
   <script>
     (function( d ){
       var jQ = d.createElement("script"),
