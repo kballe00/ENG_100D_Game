@@ -6,7 +6,7 @@
    * Contents: 
    */
   
-  require_once("/../engine/db.php");
+  require_once(dirname(__FILE__)."/../engine/db.php");
   
   global $user;
   

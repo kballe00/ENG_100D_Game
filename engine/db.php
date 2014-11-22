@@ -14,10 +14,10 @@
   
       public function connect(){
           // database credentials
-          $server = '';
-          $name = '';
-          $username = '';
-          $password = '';
+          $server = '192.254.224.75';
+          $name = 'hampur_intuithack';
+          $username = 'hampur_intuit';
+          $password = 'ucsd2014';
           
           // connect
           $this->pdo = new PDO( "mysql:host=$server;dbname=$name;port=3306",
