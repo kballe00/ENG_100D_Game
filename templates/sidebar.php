@@ -5,12 +5,12 @@
 ?>
 <section id="sidebar">
   <header>
-    <img src="avatar.png" alt>
+    <img src="https://scontent-a-ord.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10369881_10204685316198043_7276222986964151542_n.jpg?oh=067c9112ffc5c9496dde48dc6762ff8c&oe=5512D38C" alt>
     <h1>
       <?php
       
         // echo $user->get("name");
-        echo "John Smith";
+        echo "Purag Moumdjian";
       
       ?>
     </h1>

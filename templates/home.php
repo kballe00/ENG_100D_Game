@@ -22,7 +22,7 @@
       Your goal is to save your money when appropriate. Save Wisely!
     </div>
     <div class="options">
-      <a href="play">GET STARTED</a>
+      <a href="game">GET STARTED</a>
     </div>
   </div>
 </main>

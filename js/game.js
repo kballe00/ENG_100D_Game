@@ -15,12 +15,16 @@ $(function(){
           $("." + data.var).next(".val").text("$" + data[data.var]);
           
           setTimeout(function(){
-            window.location.href = "play";
-          }, 2000);
+            window.location.href = "game";
+          }, 500);
           
         } else if( data.response == "failure" ) {
         
           alert("You will be reminded about this expense.");
+        
+          setTimeout(function(){
+            window.location.href = "game";
+          }, 500);
         
         }
       }
