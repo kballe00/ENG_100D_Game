@@ -17,7 +17,7 @@ $(function(){
         if( data.response == "success" ){
           window.location.href = "home";
         } else {
-          alert("failed login");
+          alert("Login failed, please try again.");
         }
       }
     });
