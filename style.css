@@ -99,7 +99,7 @@ section#sidebar {
       font-family: Arial, sans-serif;
     }
     
-      section#sidebar aside header a, section#sidebar nav a {
+      section#sidebar aside header a, section#sidebar nav a, .options a {
         display: inline-block;
         float: right;
         padding: 7px;
@@ -113,7 +113,7 @@ section#sidebar {
         text-shadow: none;
       }
     
-        section#sidebar aside header a:hover, section#sidebar nav a:hover {
+        section#sidebar aside header a:hover, section#sidebar nav a:hover, .options a:hover {
           box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.4);
         }
     
@@ -144,7 +144,7 @@ section#sidebar {
     margin-top: 20px;
   }
   
-  section#sidebar nav a {
+  section#sidebar nav a, .options a {
     display: inline-block;
     float: none;
     width: 42%;
@@ -222,6 +222,33 @@ section#login {
       box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.4);
     }
     
+  #prompt, #middle {
+    width: 65%;
+    box-sizing: border-box;
+    height: 320px;
+    position: absolute;
+    
+    top: 50%;
+    margin-top: -160px;
+  }
+  
+    .prompt, .middle, .sub {
+      font-size: 2.5em;
+      font-family: 'Crete Round', sans-serif;
+      text-align: center;
+      display: block;
+    }
+    
+    .options {
+      text-align: center;
+    }
+    
+    .sub {
+      font-size: 1.25em;
+      text-align: center;
+      margin: 15px 0;
+    }
+    
 @media (min-device-width: 0px) and (max-device-width: 640px), screen and (max-width: 640px) {
 
   html, body {
@@ -268,7 +295,10 @@ section#login {
   
   main {
     float: none;
-    display: block; 
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 0;
   }
   
   section#login {
@@ -293,6 +323,14 @@ section#login {
   section#login .login input {
     width: 100%;
     box-sizing: border-box;
+  }
+  
+  #prompt, #middle {
+    position: relative;
+    top: 0;
+    margin: 15px 0;
+    width:100%;
+    height: auto;
   }
 
 }

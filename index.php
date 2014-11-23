@@ -44,7 +44,7 @@
       	include('templates/home.php');
         
       } elseif ($page == 'Game') {
-      	include('templates/game.php');
+      	include('templates/game-scene.php');
         
       } elseif ($page == 'Profile') {
       	include('templates/profile.php');

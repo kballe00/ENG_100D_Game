@@ -25,10 +25,10 @@
     public function pull( $username, $key ){
       global $dbh;
     
-      $sth = $dbh->prepare("SELECT $key FROM users WHERE username='$user'");
+      $sth = $dbh->prepare("SELECT $key FROM users WHERE username='$username'");
       $sth->execute();
       
-      $fetch = $sth->fetch(PDO::MYSQL_FETCH_ASSOC);
+      $fetch = $sth->fetch(PDO::FETCH_ASSOC);
       return $fetch[ $key ];
     }
     
@@ -39,7 +39,7 @@
       $old = $this->pull( $user, $key );
       $new = $old + $val;
       
-      $sth = $dbh->prepare("UPDATE users SET $key = '$new' WHERE username = '$user'");
+      $sth = $dbh->prepare("UPDATE users SET $key = '$new' WHERE username = '$username'");
       
       $sth->execute();
     }

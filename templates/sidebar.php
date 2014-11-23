@@ -1,6 +1,6 @@
 <?php
 
-
+  
 
 ?>
 <section id="sidebar">
@@ -32,7 +32,13 @@
       <a href="profile">SEE MORE</a>
     </header>
     <span class="stat">BANK</span>
-      <span class="val">$4000</span>
+      <span class="val">
+        <?php
+        
+          echo "$" . $user->pull( $_SESSION['username'], 'bank' );
+        
+        ?>
+      </span>
     <span class="stat">JOB</span>
       <span class="val">None</span>
     <span class="stat">UNIVERSITY</span>

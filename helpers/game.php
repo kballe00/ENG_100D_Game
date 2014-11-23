@@ -4,7 +4,7 @@
 	
 	
 	class game {
-		public function get_question() {
+		public function get_question( ) {
 			global $user;
 			global $dbh;
 			$username = $_SESSION['username'];
@@ -18,19 +18,27 @@
 			if ($user->pull($username, 'tuition') > 0) {
 				$upper_limit += 1;
 			}
-			$roll = Math.floor( Math.rand() * $upper_limit );
+			$roll = rand( 0, $upper_limit );
 			
 			// Get the prompt and the effect from the general_prompt table
-			$statement = $dbh->prepare('SELECT COUNT(*) from general_prompts');
+			/* $statement = $dbh->prepare('SELECT * from general_prompts');
 			$statement->execute();
-			$fetch = $statement->fetch(PDO::MYSQL_FETCH_ASSOC);			
-			$num_of_rows = $fetch["COUNT(*)"];
-			$rand2 = Math.floor(Math.rand() * $num_of_rows);
-			$statement2 = $dbh->prepare('SELECT prompt FROM general_prompts where general_pk = :rand2');
-			$statement2->execute(array(':rand2' => $rand2));
-			$fetch2 = $statement2->fetch(PDO::MYSQL_FETCH_ASSOC);
-			$prompt = $fetch2['prompt'];
-			$effect = $fetch2['effect'];
-			return $prompt;
+			$num_of_rows = $statement->rowCount();
+			$rand2 = floor(rand() * $num_of_rows);
+			$statement2 = $dbh->prepare('SELECT prompts FROM general_prompts where general_pk = $rand2');
+			$statement2->execute();
+			$fetch2 = $statement2->fetch(PDO::FETCH_ASSOC); */
+      
+      $statement = $dbh->prepare('SELECT * FROM general_prompts ORDER BY RAND() LIMIT 1');
+      $statement->execute();
+      $fetch = $statement->fetch(PDO::FETCH_ASSOC);
+
+      $prompt = $fetch['prompts'];
+      $effect = $fetch['effects'];
+      
+      return array(
+        'prompt' => $prompt,
+        'effect' => $effect
+      );
 		}
 	}

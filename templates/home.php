@@ -4,18 +4,25 @@
 
 ?>
 <main>
-  <header>
-    <h1>Welcome!</h1>
-    <h2>We need to know a little more about you.</h2>
-  </header>
-  <div>
-    <a href="profile">ADD INFORMATION</a>
-  </div>
-  
-  <p>OR...</p>
-  
-  <p>You can get started saving.</p>
-  <div>
-    <a href="game">LET'S GO!</a>
+  <div id="middle">
+    <div class="prompt">
+      CONGRATULATIONS!
+    </div>
+    <div class="sub">
+      You just graduated from high school! You received $1000 in gifts from
+      friends and family, which has been deposited in your bank on the left.
+      
+      <br><br>
+      
+      In this simulation, you will practice responding to several different
+      situations that will cost you money, and, sometimes, earn you money.
+      
+      <br><br>
+      
+      Your goal is to save your money when appropriate. Save Wisely!
+    </div>
+    <div class="options">
+      <a href="play">GET STARTED</a>
+    </div>
   </div>
 </main>
