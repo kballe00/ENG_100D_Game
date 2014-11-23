@@ -36,10 +36,10 @@
     public function put( $username, $key, $val ){
       global $dbh;
     
-      $old = $this->pull( $user, $key );
-      $new = $old + $val;
+      $old = $this->pull( $username, $key );
+      $new = intval( $old ) + intval( $val );
       
-      $sth = $dbh->prepare("UPDATE users SET $key = '$new' WHERE username = '$username'");
+      $sth = $dbh->prepare("UPDATE users SET $key = $new WHERE username = '$username'");
       
       $sth->execute();
     }

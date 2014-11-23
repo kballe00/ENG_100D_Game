@@ -24,6 +24,7 @@
   
   <script src="//code.jquery.com/jquery-latest.min.js"></script>
   <script src="js/login.js"></script>
+  <script src="js/game.js"></script>
   
 </head>
 <body>

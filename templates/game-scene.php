@@ -8,6 +8,7 @@
     $pattern = '/([a-x]+)([+|-]=)([0-9]+)/';
 
     $_SESSION['amt'] = intval( preg_replace( $pattern, '$3', $string ) );
+    $_SESSION['var'] = preg_replace( $pattern, '$1', $string );
     
     if( substr( preg_replace( $pattern, '$2', $string ), 0, 1 ) == '-' ){
       $_SESSION['amt'] = - $_SESSION['amt'];

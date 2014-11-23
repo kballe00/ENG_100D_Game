@@ -31,7 +31,7 @@
       STATS
       <a href="profile">SEE MORE</a>
     </header>
-    <span class="stat">BANK</span>
+    <span class="stat bank">BANK</span>
       <span class="val">
         <?php
         
@@ -40,10 +40,35 @@
         ?>
       </span>
     <span class="stat">JOB</span>
-      <span class="val">None</span>
-    <span class="stat">UNIVERSITY</span>
-      <span class="val">None</span>
+      <span class="val">
+        <?php
+        
+          if( $user->pull( $_SESSION['username'], 'wages' ) ){
+            echo "$" . $user->pull( $_SESSION['username'], 'wages' );
+          } else {
+            echo "None";
+          }
+        
+        ?>
+      </span>
+    <span class="stat">TUITION</span>
+      <span class="val">
+        <?php
+        
+          if( $user->pull( $_SESSION['username'], 'tuition' ) ){
+            echo "$" . $user->pull( $_SESSION['username'], 'tuition' );
+          } else {
+            echo "None";
+          }
+        
+        ?>
+      </span>
     <span class="stat">DAYS</span>
-      <span class="val">230</span>
+      <span class="val">
+        <?php
+        
+          echo 7 * $user->pull( $_SESSION['username'], 'round' );
+        
+        ?></span>
   </aside>
 </section>
