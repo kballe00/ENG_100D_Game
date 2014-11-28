@@ -1,4 +1,4 @@
-Global TIES
+It's All About the Kids (IAATK)
 ==========
 
 Project started for Intuit Hackathon @ UCSD (11/21 - 11/22/14)
