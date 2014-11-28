@@ -1,4 +1,4 @@
-IntuitHack
+Global TIES
 ==========
 
 Project started for Intuit Hackathon @ UCSD (11/21 - 11/22/14)
